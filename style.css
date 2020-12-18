@@ -79,7 +79,18 @@ body {
 }
 /* /FINE CLASSI ICONE */
 
+/* CLASSI DELLA SIDEBAR */
 .notification {
+  height: 80px;
+  width: 900px;
+  background-color: lightblue;
+}
+.search {
+  height: 70px;
+  width: 900px;
+  background-color: grey;
+}
+.contact {
   height: 80px;
   width: 900px;
   background-color: lightblue;
