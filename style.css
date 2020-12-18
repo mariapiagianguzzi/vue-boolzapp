@@ -1,53 +1,45 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lato';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato";
 }
 
-
-body{
-    background-color: rgb(206, 193, 193);
+body {
+  background-color: rgb(206, 193, 193);
 }
 
-.green{
-    height: 80px;
-    background-color: rgb(60, 206, 186);
+.green {
+  height: 80px;
+  background-color: rgb(60, 206, 186);
 }
 
 /* classi utility */
-d-flex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.d-flex {
+  display: flex;
 }
-.container{
-    width: 1430px;
-    height: 880px;
-    position: relative;
-    top: -50px;
-}
-.container::after{
-    display: table;
-    clear: both;
-    content: "";
+.container {
+  justify-content: center;
+  align-items: center;
 }
 
-.sidebar{
-    width: 40%;
-    height: 500px;
-    background-color: white;
-    float: left;
+.windowApp {
+  width: 1430px;
+  height: 880px;
+  position: relative;
+  top: -70px;
+  justify-content: center;
+  align-items: center;
 }
 
-.chat{
-    width: 60%;
-    height: 500px;
-    background-color: blue;
-    float: right;
-} 
-.clearfix{
-    clear: both;
-    display: table;
-    content: "";
+.sidebar {
+  width: 40%;
+  height: 100%;
+  background-color: white;
+}
+
+.chat {
+  width: 50%;
+  height: 100%;
+  background-color: blue;
 }
