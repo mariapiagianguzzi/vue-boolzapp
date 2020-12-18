@@ -41,5 +41,18 @@ body {
 .chat {
   width: 50%;
   height: 100%;
-  background-color: blue;
+  background-image: url("./img/mine.jpg");
+}
+
+.userName {
+  height: 70px;
+  background-color: rgb(211, 209, 209);
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  margin-top: 5px;
+  margin-left: 10px;
 }
