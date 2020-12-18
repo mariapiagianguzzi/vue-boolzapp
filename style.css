@@ -47,6 +47,7 @@ body {
 .userName {
   height: 70px;
   background-color: rgb(211, 209, 209);
+  position: relative;
 }
 
 .avatar {
@@ -55,4 +56,31 @@ body {
   border-radius: 50px;
   margin-top: 5px;
   margin-left: 10px;
+}
+
+/* CLASSI ICONE */
+.userName span,
+.circle,
+.message,
+.dot {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.circle {
+  margin-left: 400px;
+}
+.message {
+  margin-left: 430px;
+}
+.dot {
+  margin-left: 450px;
+}
+/* /FINE CLASSI ICONE */
+
+.notification {
+  height: 80px;
+  width: 900px;
+  background-color: lightblue;
 }
