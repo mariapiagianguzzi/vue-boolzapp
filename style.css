@@ -9,89 +9,142 @@ body {
   background-color: rgb(206, 193, 193);
 }
 
-.green {
+/* .green {
   height: 80px;
   background-color: rgb(60, 206, 186);
-}
+} */
 
 /* classi utility */
 .d-flex {
   display: flex;
 }
+
+.left {
+  width: 400px;
+  height: 100%;
+  background-color: grey;
+}
+.right {
+  width: calc(100% - 400px);
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .container {
-  justify-content: center;
+  width: 1140px;
+  height: 600px;
+  margin: 30px auto;
+}
+
+.userName,
+.contactUser {
+  height: 84px;
+  padding: 10px;
+  background-color: rgb(238, 230, 230);
+  justify-content: space-between;
   align-items: center;
 }
-
-.windowApp {
-  width: 1430px;
-  height: 880px;
-  position: relative;
-  top: -70px;
-  justify-content: center;
-  align-items: center;
-}
-
-.sidebar {
-  width: 40%;
-  height: 100%;
-  background-color: white;
-}
-
-.chat {
-  width: 50%;
-  height: 100%;
-  background-image: url("./img/mine.jpg");
-}
-
-.userName {
-  height: 70px;
-  background-color: rgb(211, 209, 209);
-  position: relative;
-}
-
-.avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50px;
-  margin-top: 5px;
+.user p,
+.contattoChat p {
+  line-height: 60px;
   margin-left: 10px;
 }
 
+img.avatar {
+  width: 60px;
+  border-radius: 50%;
+}
+
 /* CLASSI ICONE */
-.userName span,
-.circle,
-.message,
-.dot {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.icons > i {
+  color: rgb(190, 185, 185);
+  font-size: 25px;
+  padding: 10px;
 }
-.circle {
-  margin-left: 400px;
+
+.search > input {
+  width: 89%;
+  height: 100%;
+  border-style: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: rgb(240, 245, 245);
+  padding-left: 10px;
 }
-.message {
-  margin-left: 430px;
-}
-.dot {
-  margin-left: 450px;
-}
+
 /* /FINE CLASSI ICONE */
 
 /* CLASSI DELLA SIDEBAR */
 .notification {
-  height: 80px;
-  width: 900px;
+  padding: 20px 22px;
   background-color: lightblue;
+}
+.bell {
+  border-radius: 50%;
+  font-size: 2em;
+  padding: 20px;
+  color: #87cdee;
+  background-color: #f9fbfc;
+}
+.notification .addNotification p {
+  margin-left: 40px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.notification .addNotification a {
+  color: #3e5a70;
+  font-size: 14px;
+  margin-left: 40px;
 }
 .search {
-  height: 70px;
-  width: 900px;
-  background-color: grey;
+  height: 60px;
+  padding: 10px;
+  background-color: rgb(250, 246, 246);
+}
+.d-search {
+  color: rgb(190, 185, 185);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.contacts {
+  height: calc(100% - 84px - 112px - 60px);
+  overflow-y: scroll;
 }
 .contact {
-  height: 80px;
-  width: 900px;
-  background-color: lightblue;
+  padding: 18px 20px;
+  border-bottom: 1px solid grey;
+  background-color: rgb(234, 243, 245);
+  border-bottom: 1px solid rgb(236, 226, 226);
+}
+
+/* SEZIONE CHAT */
+.boxChat {
+  width: 100%;
+  height: calc(100% - 84px - 84px);
+  overflow-y: scroll;
+  background-image: url("./img/mine.jpg");
+}
+.messageChat {
+  height: 84px;
+  padding: 15px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(238, 230, 230);
+}
+
+.messageChat > input {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border-style: none;
+  outline: none;
+  padding-left: 10px;
+  border: 1px solid grey;
+}
+.messageChat > i {
+  margin: 0 10px;
+  font-size: 25px;
+  color: rgb(190, 185, 185);
 }

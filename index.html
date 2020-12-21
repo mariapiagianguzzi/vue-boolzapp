@@ -16,54 +16,83 @@
     <title>Vue Boolzapp</title>
   </head>
   <body>
-    <header>
+    <!--  <header>
       <div class="green"></div>
-    </header>
+    </header> -->
 
-    <main>
-      <div id="app">
-        <div class="container d-flex">
-          <div class="windowApp d-flex">
-            <div class="sidebar">
-              <div class="userName">
-                <img class="avatar" src="./img/avatar_io.jpg" alt="" />
-                <span>Nome Utente</span>
-                <i class="fas fa-circle-notch circle"></i>
-                <i class="fas fa-comment-alt message"></i>
-                <i class="fas fa-ellipsis-v dot"></i>
-              </div>
-              <div class="notification">
-                <i class="fas fa-bell-slash"></i>
-              </div>
-              <div class="search">
-                <i class="fas fa-search"></i>
-                <input type="text" />
-              </div>
-              <div class="contacts">
-                <div class="contact">
-                  <img class="avatar" src="./img/avatar_4.jpg" alt="" />
-                </div>
-                <div class="contact">
-                  <img class="avatar" src="./img/avatar_2.jpg" alt="" />
-                </div>
-                <div class="contact">
-                  <img class="avatar" src="./img/avatar_6.jpg" alt="" />
-                </div>
-                <div class="contact">
-                  <img class="avatar" src="./img/avatar_8.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="chat">
-              <div class="contattoChat"></div>
-              <div class="vieChat"></div>
-              <div class="textChat"></div>
-              <input type="text" />
-            </div>
+    <div id="app" class="container d-flex">
+      <aside class="left">
+        <div class="userName d-flex">
+          <div class="user d-flex">
+            <img class="avatar" src="./img/avatar_io.jpg" alt="" />
+            <p>Nome Utente</p>
+          </div>
+          <div class="icons">
+            <i class="fas fa-circle-notch"></i>
+            <i class="fas fa-comment-alt"></i>
+            <i class="fas fa-ellipsis-v"></i>
           </div>
         </div>
-      </div>
-    </main>
+        <div class="notification d-flex">
+          <i class="fas fa-bell-slash bell"></i>
+          <div class="addNotification">
+            <p>Ricevi notifiche di nuovi messaggi</p>
+            <a href="#">Attiva notifiche desktop</a>
+          </div>
+        </div>
+        <div class="search">
+          <i class="fas fa-search d-search"></i>
+          <input
+            type="text"
+            name=""
+            value=""
+            placeholder="Cerca o inizia una nuova chat"
+          />
+        </div>
+        <div class="contacts">
+          <div class="contact">
+            <img class="avatar" src="./img/avatar_4.jpg" alt="" />
+          </div>
+          <div class="contact">
+            <img class="avatar" src="./img/avatar_2.jpg" alt="" />
+          </div>
+          <div class="contact">
+            <img class="avatar" src="./img/avatar_6.jpg" alt="" />
+          </div>
+          <div class="contact">
+            <img class="avatar" src="./img/avatar_8.jpg" alt="" />
+          </div>
+          <div class="contact">
+            <img class="avatar" src="./img/avatar_5.jpg" alt="" />
+          </div>
+        </div>
+      </aside>
+      <main class="right d-flex">
+        <div class="contactUser d-flex">
+          <div class="contattoChat d-flex">
+            <img class="avatar" src="./img/avatar_7.jpg" alt="" />
+            <p>Michele</p>
+          </div>
+          <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-paperclip"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </div>
+        <div class="boxChat"></div>
+        <div class="messageChat d-flex">
+          <i class="far fa-smile"></i>
+          <input
+            type="text"
+            name=""
+            value=""
+            placeholder="Scrivi un messaggio"
+          />
+          <i class="fas fa-microphone"></i>
+        </div>
+      </main>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="./js/main.js" charset="utf-8"></script>
   </body>
