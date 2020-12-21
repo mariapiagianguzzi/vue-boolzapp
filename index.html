@@ -16,9 +16,7 @@
     <title>Vue Boolzapp</title>
   </head>
   <body>
-    <!--  <header>
-      <div class="green"></div>
-    </header> -->
+    <div class="green"></div>
 
     <div id="app" class="container d-flex">
       <aside class="left">
@@ -50,27 +48,20 @@
           />
         </div>
         <div class="contacts">
-          <div class="contact">
-            <img class="avatar" src="./img/avatar_4.jpg" alt="" />
-          </div>
-          <div class="contact">
-            <img class="avatar" src="./img/avatar_2.jpg" alt="" />
-          </div>
-          <div class="contact">
-            <img class="avatar" src="./img/avatar_6.jpg" alt="" />
-          </div>
-          <div class="contact">
-            <img class="avatar" src="./img/avatar_8.jpg" alt="" />
-          </div>
-          <div class="contact">
-            <img class="avatar" src="./img/avatar_5.jpg" alt="" />
+          <div
+            class="contact d-flex"
+            v-for="(contact,index) in contacts"
+            @click="activeMessage(index)"
+          >
+            <img class="avatar" alt="" :src="contacts[index].avatar" />
+            <p>{{contacts[index].name}}</p>
           </div>
         </div>
       </aside>
       <main class="right d-flex">
         <div class="contactUser d-flex">
           <div class="contattoChat d-flex">
-            <img class="avatar" src="./img/avatar_7.jpg" alt="" />
+            <img class="avatar" src="./img/avatar_4.jpg" alt="" />
             <p>Michele</p>
           </div>
           <div class="icons">
@@ -79,7 +70,11 @@
             <i class="fas fa-ellipsis-v"></i>
           </div>
         </div>
-        <div class="boxChat"></div>
+        <div class="boxChat">
+          <div class="textActive" v-for="message in contacts[counter].messages">
+            <div :class="message.status">{{ message.text }}</div>
+          </div>
+        </div>
         <div class="messageChat d-flex">
           <i class="far fa-smile"></i>
           <input
@@ -94,6 +89,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="./js/main.js" charset="utf-8"></script>
+    <!-- <script src="./js/main.js" charset="utf-8"></script> -->
+    <script src="./js/main2/main.js" charset="utf-8"></script>
   </body>
 </html>
