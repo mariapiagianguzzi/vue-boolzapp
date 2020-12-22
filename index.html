@@ -73,7 +73,7 @@
         <div class="boxChat">
           <div class="textActive" v-for="message in contacts[counter].messages">
             <div :class="message.status">
-              {{ message.text }} <span>ciao</span>
+              {{ message.text }} <span>{{ message.date }}</span>
             </div>
           </div>
         </div>
@@ -93,6 +93,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <!-- <script src="./js/main.js" charset="utf-8"></script> -->
     <!-- <script src="./js/main2/main.js" charset="utf-8"></script> -->
     <script src="./js/main3/main.js" charset="utf-8"></script>

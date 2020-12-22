@@ -120,7 +120,7 @@ let app = new Vue({
     sendMessage() {
       if (this.message.length != 0) {
         this.contacts[this.counter].messages.push({
-          date: "10/01/2020 15:50:00",
+          date: dayjs().format("DD/MM/YYYY"),
           text: this.message,
           status: "sent",
         });
