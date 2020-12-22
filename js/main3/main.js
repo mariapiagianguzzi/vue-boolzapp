@@ -118,8 +118,12 @@ let app = new Vue({
       console.log(index);
     },
     sendMessage() {
-      if ((this.message.length = 0)) {
-        this.message.push(this.message);
+      if (this.message.length != 0) {
+        this.contacts[this.counter].messages.push({
+          date: "10/01/2020 15:50:00",
+          text: this.message,
+          status: "sent",
+        });
       }
     },
   },

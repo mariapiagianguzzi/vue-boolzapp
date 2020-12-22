@@ -72,7 +72,9 @@
         </div>
         <div class="boxChat">
           <div class="textActive" v-for="message in contacts[counter].messages">
-            <div :class="message.status">{{ message.text }}</div>
+            <div :class="message.status">
+              {{ message.text }} <span>ciao</span>
+            </div>
           </div>
         </div>
         <div class="messageChat d-flex">

@@ -182,3 +182,8 @@ img.avatar {
   font-size: 25px;
   color: rgb(190, 185, 185);
 }
+span {
+  position: absolute;
+  font-size: 2px;
+  color: lightgray;
+}
