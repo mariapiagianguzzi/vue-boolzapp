@@ -182,8 +182,17 @@ img.avatar {
   font-size: 25px;
   color: rgb(190, 185, 185);
 }
-span {
+.cardData {
+  position: relative;
+  width: 250px;
+  height: 50px;
+}
+
+.cardData > .dataMessage {
   position: absolute;
-  font-size: 2px;
-  color: lightgray;
+  right: 0;
+  font-size: 5px;
+  margin-top: 5px;
+  color: grey;
+  bottom: 0;
 }

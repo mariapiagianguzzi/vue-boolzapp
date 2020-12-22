@@ -44,24 +44,31 @@
             type="text"
             name=""
             value=""
+            v-model="search"
             placeholder="Cerca o inizia una nuova chat"
           />
         </div>
         <div class="contacts">
           <div
             class="contact d-flex"
-            v-for="(contact,index) in contacts"
+            v-for="(contact,index) in filteredItems"
             @click="activeMessage(index)"
           >
-            <img class="avatar" alt="" :src="contacts[index].avatar" />
-            <p>{{contacts[index].name}}</p>
+            <img
+              class="avatar"
+              :src="('./js/main4/img/avatar' + contact.avatar + '.jpg')"
+            />
+            <p>{{contact.name}}</p>
           </div>
         </div>
       </aside>
       <main class="right d-flex">
         <div class="contactUser d-flex">
           <div class="contattoChat d-flex">
-            <img class="avatar" src="./img/avatar_4.jpg" alt="" />
+            <img
+              class="avatar"
+              :src="('./js/main4/img/avatar' + contacts[counter].avatar + '.jpg')"
+            />
             <p>Michele</p>
           </div>
           <div class="icons">
@@ -72,8 +79,9 @@
         </div>
         <div class="boxChat">
           <div class="textActive" v-for="message in contacts[counter].messages">
-            <div :class="message.status">
-              {{ message.text }} <span>{{ message.date }}</span>
+            <div :class="message.status" class="cardDate">
+              <p>{{ message.text }}</p>
+              <p class="dataMessage">{{ message.date }}</p>
             </div>
           </div>
         </div>
@@ -96,6 +104,7 @@
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <!-- <script src="./js/main.js" charset="utf-8"></script> -->
     <!-- <script src="./js/main2/main.js" charset="utf-8"></script> -->
-    <script src="./js/main3/main.js" charset="utf-8"></script>
+    <!-- <script src="./js/main3/main.js" charset="utf-8"></script> -->
+    <script src="./js/main4/main.js" charset="utf-8"></script>
   </body>
 </html>

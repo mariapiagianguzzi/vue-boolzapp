@@ -1,18 +1,18 @@
-/* Milestone 3
-● Aggiunta di un messaggio : l’utente scrive un testo nella parte bassa e digitando
-“enter” il testo viene aggiunto al thread sopra, come messaggio verde
-● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
-un “ok” come risposta, che apparirà dopo 1 secondo. */
+/* Milestone 4
+● Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i
+contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo
+“mar” rimangono solo Marco e Martina) */
 
 let app = new Vue({
   el: "#app",
   data: {
     counter: 0,
     message: "",
+    search: "",
     contacts: [
       {
         name: "Michele",
-        avatar: "./img/avatar_4.jpg",
+        avatar: "_4",
         visible: true,
         messages: [
           {
@@ -34,7 +34,7 @@ let app = new Vue({
       },
       {
         name: "Fabio",
-        avatar: "./img/avatar_2.jpg",
+        avatar: "_2",
         visible: true,
         messages: [
           {
@@ -56,7 +56,7 @@ let app = new Vue({
       },
       {
         name: "Samuele",
-        avatar: "./img/avatar_6.jpg",
+        avatar: "_6",
         visible: true,
         messages: [
           {
@@ -78,7 +78,7 @@ let app = new Vue({
       },
       {
         name: "Luisa",
-        avatar: "./img/avatar_8.jpg",
+        avatar: "_8",
         visible: true,
         messages: [
           {
@@ -95,7 +95,7 @@ let app = new Vue({
       },
       {
         name: "Luca",
-        avatar: "./img/avatar_5.jpg",
+        avatar: "_5",
         visible: true,
         messages: [
           {
@@ -118,7 +118,7 @@ let app = new Vue({
       console.log(index);
     },
     sendMessage() {
-      if (this.message.length >= 0) {
+      if (this.message.text.length > 0) {
         this.contacts[this.counter].messages.push({
           date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
           text: this.message,
@@ -126,6 +126,13 @@ let app = new Vue({
         });
         this.message = "";
       }
+    },
+  },
+  computed: {
+    filteredItems() {
+      return this.contacts.filter((item) => {
+        return item.name.toLowerCase().includes(this.search.toLowerCase());
+      });
     },
   },
 });
