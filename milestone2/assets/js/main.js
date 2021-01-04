@@ -1,16 +1,16 @@
-/* Milestone 1
-● Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e
-dall’interlocutore (bianco) assegnando due classi CSS diverse
-● Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare
-nome e immagine di ogni contatto */
+/* Milestone 2
+● Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i
+messaggi relativi al contatto attivo all’interno del pannello della conversazione
+● Click sul contatto mostra la conversazione del contatto cliccato */
 
 let app = new Vue({
   el: "#app",
   data: {
+    counter: 0,
     contacts: [
       {
         name: "Michele",
-        avatar: "./img/avatar_4.jpg",
+        avatar: "./assets/img/avatar_4.jpg",
         visible: true,
         messages: [
           {
@@ -32,7 +32,7 @@ let app = new Vue({
       },
       {
         name: "Fabio",
-        avatar: "./img/avatar_2.jpg",
+        avatar: "./assets/img/avatar_2.jpg",
         visible: true,
         messages: [
           {
@@ -54,7 +54,7 @@ let app = new Vue({
       },
       {
         name: "Samuele",
-        avatar: "./img/avatar_6.jpg",
+        avatar: "./assets/img/avatar_6.jpg",
         visible: true,
         messages: [
           {
@@ -76,7 +76,7 @@ let app = new Vue({
       },
       {
         name: "Luisa",
-        avatar: "./img/avatar_8.jpg",
+        avatar: "./assets/img/avatar_8.jpg",
         visible: true,
         messages: [
           {
@@ -93,7 +93,7 @@ let app = new Vue({
       },
       {
         name: "Luca",
-        avatar: "./img/avatar_5.jpg",
+        avatar: "./assets/img/avatar_5.jpg",
         visible: true,
         messages: [
           {
@@ -110,5 +110,10 @@ let app = new Vue({
       },
     ],
   },
-  methods: {},
+  methods: {
+    activeMessage(index) {
+      this.counter = index;
+      console.log(index);
+    },
+  },
 });

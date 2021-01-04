@@ -12,7 +12,7 @@ let app = new Vue({
     contacts: [
       {
         name: "Michele",
-        avatar: "_4",
+        avatar: "./assets/img/avatar_4.jpg",
         visible: true,
         messages: [
           {
@@ -34,7 +34,7 @@ let app = new Vue({
       },
       {
         name: "Fabio",
-        avatar: "_2",
+        avatar: "./assets/img/avatar_2.jpg",
         visible: true,
         messages: [
           {
@@ -56,7 +56,7 @@ let app = new Vue({
       },
       {
         name: "Samuele",
-        avatar: "_6",
+        avatar: "./assets/img/avatar_6.jpg",
         visible: true,
         messages: [
           {
@@ -78,7 +78,7 @@ let app = new Vue({
       },
       {
         name: "Luisa",
-        avatar: "_8",
+        avatar: "./assets/img/avatar_8.jpg",
         visible: true,
         messages: [
           {
@@ -95,7 +95,7 @@ let app = new Vue({
       },
       {
         name: "Luca",
-        avatar: "_5",
+        avatar: "./assets/img/avatar_5.jpg",
         visible: true,
         messages: [
           {
@@ -118,7 +118,7 @@ let app = new Vue({
       console.log(index);
     },
     sendMessage() {
-      if (this.message.text.length > 0) {
+      if (this.message.length >= 0) {
         this.contacts[this.counter].messages.push({
           date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
           text: this.message,
@@ -126,6 +126,14 @@ let app = new Vue({
         });
         this.message = "";
       }
+      setTimeout(this.receivedMessage, 1000);
+    },
+    receivedMessage() {
+      this.contacts[this.counter].messages.push({
+        date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+        text: "ok",
+        status: "received",
+      });
     },
   },
   computed: {

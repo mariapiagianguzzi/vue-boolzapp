@@ -158,7 +158,7 @@ img.avatar {
   width: 100%;
   height: calc(100% - 84px - 84px);
   overflow-y: scroll;
-  background-image: url("./img/mine.jpg");
+  background-image: url("../img/mine.jpg");
 }
 .messageChat {
   height: 84px;
